@@ -1,3 +1,8 @@
+
+# set.add（x）只能是一个元素，但是不会拆开
+# set.update(x),如果x是一个字符串，则会拆开
+# x可以是列表，字典，元祖，而且不会拆开
+# 但是字典只会添加字典名
 # set1 = set(range(1, 10))
 # print(set1)
 # set1.update([10, 11, 12])
@@ -46,4 +51,6 @@ def main():
         # 休眠200毫秒
         time.sleep(0.2)
         content = content[1:] + content[0]
+
+
 main()
