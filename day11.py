@@ -1,13 +1,17 @@
 import time
 from math import sqrt
+import json
+import requests
 
 
+# 一次读文件，需要手动关闭
 def main1():
     f = open('致橡树.txt', 'r', encoding='utf-8')
     print(f.read())
     f.close()
 
 
+# 一次读文件，需要手动关闭，使用了try except
 def main2():
     f = None
     try:
@@ -24,6 +28,7 @@ def main2():
             f.close()
 
 
+# 一次读文件，不需要自己关闭
 def main3():
     try:
         with open('致橡树.txt', 'r', encoding='utf-8') as f:
@@ -36,6 +41,7 @@ def main3():
         print('读取文件时解码错误')
 
 
+# 分开每行读文件，不需要手动关闭
 def main4():
     with open('致橡树.txt', 'r', encoding='utf-8') as f:
         print(f.read())
@@ -51,6 +57,7 @@ def main4():
     print(lines)
 
 
+# 判断素数
 def is_prime(n):
     assert n > 0
     for factor in range(2, int(sqrt(n) + 1)):
@@ -59,6 +66,7 @@ def is_prime(n):
     return True if n != 1 else False
 
 
+# 读写文件
 def main5():
     filenames = ('a.txt', 'b.txt', 'c.txt')
     fs_list = []
@@ -82,6 +90,7 @@ def main5():
     print('操作完成！')
 
 
+# 二进制读写
 def main6():
     try:
         with open('mm.jpg', 'rb') as fs1:
@@ -96,5 +105,41 @@ def main6():
     print('程序执行结束')
 
 
+def main7():
+    mydict = {
+        'name': '骆昊',
+        'age': 38,
+        'qq': 957658,
+        'friends': ['王大锤', '白元芳'],
+        'cars': [
+            {'brand': 'BYD', 'max_speed': 180},
+            {'brand': 'Audi', 'max_speed': 280},
+            {'brand': 'Benz', 'max_speed': 320}
+        ]
+    }
+    try:
+        with open('data.json', 'w', encoding='utf-8') as fs:
+            json.dump(mydict, fs)
+    except IOError as e:
+        print(e)
+    print('保存数据完成')
+
+
+'''
+- `dump` - 将Python对象按照JSON格式序列化到文件中
+- `dumps` - 将Python对象处理成JSON格式的字符串
+- `load` - 将文件中的JSON数据反序列化成对象
+- `loads` - 将字符串的内容反序列化成Python对象
+'''
+
+
+# 天行新闻，需要key
+def main8():
+    resp = requests.get('http://api.tianapi.com/guonei/?key=APIKey&num=10')
+    data_model = json.loads(resp.text)
+    for news in data_model['newslist']:
+        print(news['title'])
+
+
 if __name__ == "__main__":
-    main6()
+    main8()
