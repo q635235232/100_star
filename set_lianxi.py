@@ -52,5 +52,5 @@ def main():
         time.sleep(0.2)
         content = content[1:] + content[0]
 
-
-main()
+if __name__=="__main__":
+    main()
