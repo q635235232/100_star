@@ -121,23 +121,23 @@ class Ball(object):
 
 
 def main4():
-    balls=[]
+    balls = []
     pygame.init()
-    screen=pygame.display.set_mode((800,600))
+    screen = pygame.display.set_mode((800, 600))
     pygame.display.set_caption('大球吃小球')
-    running=True
+    running = True
     while running:
         for event in pygame.event.get():
-            if event.type ==pygame.QUIT:
-                running=False
-            if event.type==pygame.MOUSEBUTTONDOWN and event.button==1:
-                x,y=event.pos
-                radius=randint(10,100)
-                sx,sy=randint(-10,10),randint(-10,10)
-                color=Color.random_color()
-                ball=Ball(x,y,radius,sx,sy,color)
+            if event.type == pygame.QUIT:
+                running = False
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                x, y = event.pos
+                radius = randint(10, 100)
+                sx, sy = randint(-10, 10), randint(-10, 10)
+                color = Color.random_color()
+                ball = Ball(x, y, radius, sx, sy, color)
                 balls.append(ball)
-        screen.fill((255,255,255))
+        screen.fill((255, 255, 255))
         for ball in balls:
             if ball.alive:
                 ball.draw(screen)
@@ -149,6 +149,7 @@ def main4():
             ball.move(screen)
             for other in balls:
                 ball.eat(other)
+
 
 if __name__ == '__main__':
     main4()
