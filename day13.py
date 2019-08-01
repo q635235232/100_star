@@ -214,5 +214,84 @@ def main8():
     panel.pack(side='bottom')
     tkinter.mainloop()
 
+
+class DownloadTaskHandler(Thread):
+    def __init__(self, button1):
+        super().__init__()
+        self._button1 = button1
+
+    def run(self):
+        sleep(10)
+        tkinter.messagebox.showinfo('提示', '下载完成!')
+        self._button1.config(state=tkinter.NORMAL)
+
+
+def download2(button1):
+    # 禁用下载按钮
+    button1.config(state=tkinter.DISABLED)
+    # 通过daemon参数将线程设置为守护线程(主程序退出就不再保留执行)
+    # 在线程中处理耗时间的下载任务
+    p1 = DownloadTaskHandler(button1, daemon=True).start()
+
+
+def show_about():
+    tkinter.messagebox.showinfo('关于', '作者: 骆昊(v1.0)')
+
+
+def main9():
+    top = tkinter.Tk()
+    top.title('多线程')
+    top.geometry('200x150')
+    top.wm_attributes('-topmost', 1)
+    panel = tkinter.Frame(top)
+    button1 = tkinter.Button(panel, text='下载', command=lambda: download2(button1=button1), )
+    button1.pack(side='left')
+    button2 = tkinter.Button(panel, text='关于', command=show_about)
+    button2.pack(side='right')
+    panel.pack(side='bottom')
+
+    tkinter.mainloop()
+
+
+# 单进程计算
+def main10():
+    total = 0
+    number_list = [x for x in range(1, 100000001)]
+    start = time()
+    for i in number_list:
+        total += i
+    end = time()
+    print('Execution time: %.3fs' % (end - start))
+
+
+# 多进程计算
+def task_handler(curr_list, result_queue):
+    total = 0
+    for number in curr_list:
+        total += number
+    result_queue.put(total)
+
+
+def main11():
+    processes = []
+    number_list = [x for x in range(1, 100000001)]
+    result_queue = Queue()
+    index = 0
+    for _ in range(8):
+        p = Process(target=task_handler, args=(number_list[index:index + 12500000], result_queue))
+        index += 12500000
+        processes.append(p)
+        p.start()
+    start = time()
+    for p in processes:
+        p.join()
+    total = 0
+    while not result_queue.empty():
+        total += result_queue.get()
+    print(total)
+    end = time()
+    print('Execution time: ', (end - start), 's', sep='')
+
+
 if __name__ == '__main__':
-    main8()
+    main11()
