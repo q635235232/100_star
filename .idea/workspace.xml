@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da28110e-091d-41a1-8ea8-24b51af5bee8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/day14-2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/guido.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_star.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_star.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day13.py" beforeDir="false" afterPath="$PROJECT_DIR$/day13.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day14.py" beforeDir="false" afterPath="$PROJECT_DIR$/day14.py" afterDir="false" />
-    </list>
+    <list default="true" id="da28110e-091d-41a1-8ea8-24b51af5bee8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +60,7 @@
       <file leaf-file-name="day13.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day13.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
+            <state relative-caret-position="6300">
               <caret line="216" column="22" selection-start-line="216" selection-start-column="22" selection-end-line="216" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -80,7 +72,7 @@
       <file leaf-file-name="day14.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day14.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="2400">
               <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -92,8 +84,8 @@
       <file leaf-file-name="day14-2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day14-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="360">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -378,7 +370,7 @@
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49573562" weight="0.32925472" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30063966" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30383795" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -387,11 +379,11 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4978678" weight="0.3955056" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,7 +747,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day13.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
+        <state relative-caret-position="6300">
           <caret line="216" column="22" selection-start-line="216" selection-start-column="22" selection-end-line="216" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -765,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day14.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="2400">
           <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -775,8 +767,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day14-2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="360">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
