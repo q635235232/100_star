@@ -225,7 +225,18 @@ def input_thing():
 def main2():
     max_weight, num_of_thing = map(int, input().split())
     all_thing = []
+    for _ in range(num_of_thing):
+        all_thing.append(Thing(*input_thing()))
+    all_thing.sort(key=lambda x: x.value, reverse=True)
+    total_weight = 0
+    total_price = 0
+    for thing in all_thing:
+        if total_weight + thing.weight <= max_weight:
+            print(f'小偷拿走了{thing.name}')
+            total_weight +=thing.weight
+            total_price+=thing.price
+    print('小偷拿走了价值%d美元的物品'%total_price)
 
 
 if __name__ == '__main__':
-    catch_fish()
+    main2()
