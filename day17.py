@@ -222,10 +222,21 @@ def input_thing():
     return name_str, int(price_str), int(weight_str)
 
 
-def main2():
+def solen():
     max_weight, num_of_thing = map(int, input().split())
     all_thing = []
+    for _ in range(num_of_thing):
+        all_thing.append(Thing(*input_thing()))
+    all_thing.sort(key=lambda x: x.value, reverse=True)
+    total_weight = 0
+    total_price = 0
+    for thing in all_thing:
+        if total_weight + thing.weight <= max_weight:
+            print(f'小偷拿走了{thing.name}')
+            total_weight += thing.weight
+            total_price += thing.price
+    print(f'总价值：{total_price}美元')
 
 
 if __name__ == '__main__':
-    catch_fish()
+    solen()
