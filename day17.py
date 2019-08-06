@@ -222,7 +222,7 @@ def input_thing():
     return name_str, int(price_str), int(weight_str)
 
 
-def solen():
+def main2():
     max_weight, num_of_thing = map(int, input().split())
     all_thing = []
     for _ in range(num_of_thing):
@@ -233,10 +233,10 @@ def solen():
     for thing in all_thing:
         if total_weight + thing.weight <= max_weight:
             print(f'小偷拿走了{thing.name}')
-            total_weight += thing.weight
-            total_price += thing.price
-    print(f'总价值：{total_price}美元')
+            total_weight +=thing.weight
+            total_price+=thing.price
+    print('小偷拿走了价值%d美元的物品'%total_price)
 
 
 if __name__ == '__main__':
-    solen()
+    main2()
