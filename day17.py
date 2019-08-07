@@ -222,7 +222,7 @@ def input_thing():
     return name_str, int(price_str), int(weight_str)
 
 
-def main2():
+def solen():
     max_weight, num_of_thing = map(int, input().split())
     all_thing = []
     for _ in range(num_of_thing):
@@ -239,4 +239,4 @@ def main2():
 
 
 if __name__ == '__main__':
-    main2()
+    solen()
