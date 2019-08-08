@@ -1,3 +1,8 @@
+"""
+   快速排序 - 选择枢轴对元素进行划分，左边都比枢轴小右边都比枢轴大
+"""
+
+
 def quick_sort(origin_items, comp=lambda x, y: x <= y):
     items = origin_items[:]
     _quick_sort(items, 0, len(items) - 1, comp)
