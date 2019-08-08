@@ -233,9 +233,9 @@ def solen():
     for thing in all_thing:
         if total_weight + thing.weight <= max_weight:
             print(f'小偷拿走了{thing.name}')
-            total_weight +=thing.weight
-            total_price+=thing.price
-    print('小偷拿走了价值%d美元的物品'%total_price)
+            total_weight += thing.weight
+            total_price += thing.price
+    print('小偷拿走了价值%d美元的物品' % total_price)
 
 
 if __name__ == '__main__':
