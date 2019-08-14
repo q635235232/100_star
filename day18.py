@@ -76,5 +76,52 @@ def _use_patrol():
     use_patrol()
 
 
+def main3():
+    items = list(map(int, input().split()))
+    size = len(items)
+    overall, partial = {}, {}
+    overall[size - 1] = partial[size - 1] = items[size - 1]
+    for i in range(size - 2, -1, -1):
+        partial[i] = max(items[i], partial[i + 1] + items[i])
+        overall[i] = max(partial[i], overall[i + 1])
+    print(overall[0])
+
+
+def use_filter_and_map():
+    items1 = list(map(lambda x: x ** 2, filter(lambda x: x % 2, range(1, 10))))
+    items2 = [x ** 2 for x in range(1, 10) if x % 2]
+    print(items1, items2)
+
+
+# 装饰器
+def hi():
+    return "hi yasoob!"
+
+
+def doSomethingBeforeHi(func):
+    print("I am doing some boring work before executing hi()")
+    print(func())
+
+
+def a_new_decorator(a_func):
+    def wrapTheFunction():
+        print("I am doing some boring work before executing a_func()")
+
+        a_func()
+
+        print("I am doing some boring work after executing a_func()")
+
+    return wrapTheFunction
+
+
+@a_new_decorator
+def a_function_requiring_decoration():
+    """Hey you! Decorate me!"""
+    print("I am the function which needs some decoration to "
+          "remove my foul smell")
+
+
 if __name__ == '__main__':
-    _use_patrol()
+    a_function_requiring_decoration()
+    a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
+    print(a_function_requiring_decoration.__name__)
