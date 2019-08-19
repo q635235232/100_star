@@ -274,4 +274,4 @@ def use_poker():
 
 
 if __name__ == '__main__':
-    use_poker()
+    pass
