@@ -274,7 +274,7 @@ def use_poker():
 
 
 class SetOnceMappingMixin():
-    """自定义混入类"""
+    """自定义混入类,例子：自定义字典限制只有在指定的key不存在时才能在字典中设置键值对。"""
     __slots__ = ()
 
     def __setitem__(self, key, value):
