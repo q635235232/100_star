@@ -67,5 +67,6 @@ def use_condition():
             pool.submit(add_money, account)
             pool.submit(sub_money, account)
 
+
 if __name__ == '__main__':
     use_condition()
