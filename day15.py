@@ -10,9 +10,24 @@ def main1():
 
 # 剪裁图像
 def main2():
-    image = Image.open('./res/guido.jpg')
-    rect = 80, 20, 310, 360
-    image.crop(rect).show()
+    image = Image.open('./res/shiyan.png')
+    print(image.size)
+    rect1 = image.size[0]
+    rect2 = image.size[1]
+    i = 1050
+    j = 1
+    k = 0
+    while i <= rect2:
+        rect = 0, k, 750, i
+        image.crop(rect).save('./res/' + str(j) + '.png')
+        j += 1
+        k += 1050
+        i += 1050
+        print(i,k)
+        if i>=rect2:
+            print(i)
+            rect=0,k,750,rect2
+            image.crop(rect).save('./res/' + str(j) + '.png')
 
 
 # 缩略图
@@ -20,6 +35,7 @@ def main3():
     image = Image.open('./res/guido.jpg')
     size = 128, 128
     image.thumbnail(size)
+    image.save('./res/guido1.png')
     image.show()
 
 
@@ -49,4 +65,4 @@ def main6():
 
 
 if __name__ == '__main__':
-    main6()
+    main2()
