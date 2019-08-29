@@ -10,34 +10,17 @@ def main1():
 
 # 剪裁图像
 def main2():
-    filename=str(input('请输入文件名'))
-    image = Image.open('./res/'+filename)
-    print(image.size)
-    rect1 = image.size[0]
-    rect2 = image.size[1]
-    i = 1050
-    j = 1
-    k = 0
-    while i <= rect2:
-        print(k, i)
-        rect = 0, k, 750, i
-        image.crop(rect).save('./res/' + str(j) + '.png')
-        j += 1
-        k += 1050
-        i += 1050
-        if i >= rect2:
-            print(i)
-            rect = 0, k, 750, rect2
-            image.crop(rect).save('./res/' + str(j) + '.png')
+    image = Image.open('./res/guido.jpg')
+    rect = 80, 20, 310, 360
+    image.crop(rect).show()
 
 
 # 缩略图
 def main3():
-    image = Image.open('./res/guido.jpg')
-    size = 128, 128
+    image = Image.open('./res/guido.png')
+    size = image.size[0]/2, image.size[1]/2
     image.thumbnail(size)
-    image.save('./res/guido1.png')
-    image.show()
+    image.save('./res/suo_nue.png')
 
 
 # 缩放和黏贴
@@ -66,4 +49,4 @@ def main6():
 
 
 if __name__ == '__main__':
-    main2()
+    main3()
