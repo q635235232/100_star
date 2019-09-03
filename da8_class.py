@@ -145,9 +145,6 @@ def Point_main():
     print(p2)
     print(p1.distance_to(p2))
 
-
 # 单下划线表示保护方法，只有自己和子类能访问。双下划线表示私有，只有自己才能访问，子类也不能重写
 # 使用supper可以继承__init__，否则不能继承
 # 继承时要用super().__init__才能继承初始化方法
-if __name__ == '__main__':
-    Point_main()

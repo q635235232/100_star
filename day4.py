@@ -62,6 +62,7 @@
 #         print("%d和%d的最大公倍数是%d" % (x, y, x * y / factor))
 #         break
 # 打印三角图案
+
 row = int(input("请输入行数："))
 for i in range(row):
     for _ in range(i + 1):

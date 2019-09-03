@@ -8,15 +8,15 @@
 #
 # 完美数
 # sum = 0
-# # for i in range(2, 100000000):
-# #     for j in range(1, i):
-# #         if i % j == 0:
-# #             sum += j
-# #     if sum == i:
-# #         print('这个是完美数%d' % i)
-# #         sum = 0
-# #     else:
-# #         sum = 0
+# for i in range(2, 100000000):
+#     for j in range(1, i):
+#         if i % j == 0:
+#             sum += j
+#     if sum == i:
+#         print('这个是完美数%d' % i)
+#         sum = 0
+#     else:
+#         sum = 0
 # 百钱百鸡
 # for i in range(0, 20):
 # #     for j in range(0, 33):
